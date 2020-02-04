@@ -1,0 +1,22 @@
+[package]
+name = "TiledAmethyst"
+version = "0.0.0"
+authors = ["Kugge"]
+edition = "2018"
+license = "MIT"
+keywords = ["tiled", "mapping", "amethyst"]
+
+[lib]
+name = "tiled"
+path = "src/lib.rs"
+
+[features]
+default = []
+amethyst = ["amethyst_assets", "amethyst_error", "specs"]
+
+[dependencies]
+amethyst_assets = {package = "amethyst_assets", git = "https://github.com/amethyst/amethyst", optional = true}
+amethyst_error = {package = "amethyst_error", git = "https://github.com/amethyst/amethyst", optional = true}
+specs = {version = "*", optional = true}
+quick-xml = "0.17.2"
+csv = "1.1.3"
